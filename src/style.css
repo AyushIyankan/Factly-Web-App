@@ -11,6 +11,10 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* MAIN LAYOUT */
 .container {
   max-width: 1500px;
