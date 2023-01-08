@@ -31,11 +31,11 @@ To run the project locally, follow these steps:
    ```js
    git clone https://github.com/AyushIyankan/Factly-Web-App
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```js
    npm install
    ```
-4. Start project
+3. Start project
    ```js
    npm start
    ```
