@@ -1,10 +1,10 @@
 export default function Header({ showForm, setShowForm }) {
-  const appTitle = "Factly";
-
   return (
     <header className="header">
       <div className="logo">
-        <h1>{appTitle}</h1>
+        <h1>
+          FACTLY <span style={{ fontSize: "24px" }}>v1.0</span>
+        </h1>
       </div>
 
       <button

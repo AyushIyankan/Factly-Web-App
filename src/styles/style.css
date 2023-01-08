@@ -4,11 +4,44 @@
   box-sizing: border-box;
 }
 
+/* body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
 body {
-  background-color: #1d1c1b;
+  background: linear-gradient(-45deg, #948e99, #2e1437);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   color: #fafaf9;
   padding: 48px 64px;
   font-family: "DM Sans", sans-serif;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hidden {
@@ -55,7 +88,6 @@ body {
 
 h1 {
   font-size: 42px;
-  text-transform: uppercase;
   line-height: 1;
   margin-top: 6px;
 }
@@ -70,12 +102,18 @@ h1 {
   background-color: #2e2b29;
   margin-bottom: 16px;
   padding: 16px 24px;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   border-radius: 16px;
 
   display: flex;
   align-items: center;
   gap: 24px;
+
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(14px);
+  background-color: rgba(255, 255, 255, 0.2);
+
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 1200px) {
@@ -93,6 +131,13 @@ h1 {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 100px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  color: #000;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(14px);
+  background-color: rgba(255, 255, 255, 0.212);
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .vote-buttons {
@@ -143,17 +188,11 @@ ul {
   text-transform: uppercase;
   font-size: 17px;
   padding: 16px 0 13px;
-  background: #536976; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #292e49,
-    #536976
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #292e49,
-    #536976
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(14px);
+  background-color: rgba(0, 0, 0, 0);
+
+  border: 2px solid rgba(255, 255, 255, 0.2);
 
   color: inherit;
   border-radius: 100px;
@@ -162,6 +201,7 @@ ul {
 }
 
 .btn:hover {
+  transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: scale(110%);
 }
 
@@ -177,12 +217,15 @@ ul {
 
 .btn-category {
   width: 100%;
-  background-image: none;
 }
 
 /* FORM */
 .fact-form {
-  background-color: #44403c;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(14px);
+  background-color: rgba(0, 0, 0, 0.237);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
   margin-bottom: 40px;
   padding: 16px 32px;
   display: flex;
@@ -194,7 +237,8 @@ ul {
 .fact-form input,
 .fact-form select {
   width: 220px;
-  background-color: #78716c;
+  background-color: rgba(0, 0, 0, 0.237);
+
   border: none;
   border-radius: 100px;
   padding: 16px;
@@ -203,8 +247,16 @@ ul {
   font-family: inherit;
 }
 
+.fact-form input:focus {
+  transition: 0.1s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.278);
+  outline-color: transparent;
+  outline: none;
+}
+
 .fact-form input::placeholder {
   color: #a8a29e;
+  padding-left: 3px;
 }
 
 .fact-form input:first-child {
