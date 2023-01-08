@@ -4,7 +4,7 @@ export default function FactList({ facts, setFacts }) {
   if (facts.length === 0)
     return (
       <p className="message">
-        No facts for this category yet! Create the first one ✌️
+        No facts for this category yet! Create the first one 😌
       </p>
     );
 

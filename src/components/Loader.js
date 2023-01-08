@@ -1,3 +1,9 @@
+import { InfinitySpin } from "react-loader-spinner";
+
 export default function Loader() {
-  return <p className="message">Loading...</p>;
+  return (
+    <>
+      <InfinitySpin width="200" color="#fff" />
+    </>
+  );
 }
