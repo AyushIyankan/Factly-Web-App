@@ -9,7 +9,7 @@ export default function FactList({ facts, setFacts }) {
     );
 
   return (
-    <section>
+    <section className="facts-main">
       <ul className="facts-list">
         {facts.map((fact) => (
           <Fact key={fact.id} fact={fact} setFacts={setFacts} />
